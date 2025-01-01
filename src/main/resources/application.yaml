@@ -1,0 +1,33 @@
+#spring:
+#  cloud:
+#    gcp:
+#      project-id: my-projectdemo-446217
+#
+#pubsub:
+#  pull:
+#    subscription: Topic_MAO-sub_1
+#  push:
+#    subscription-push: Topic_MAO-sub_1-push
+#  target:
+#    topic: Topic_MAO_Target
+
+
+spring:
+  cloud:
+    gcp:
+      project-id: my-projectdemo-446217
+      pubsub:
+        subscription:
+          pull: Topic_MAO-sub_1
+          target: Topic_MAO_Target-sub
+        topic:
+          source: Topic_MAO
+          target: Topic_MAO_Target
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.google.cloud: DEBUG
+    com.google.pubsub: DEBUG

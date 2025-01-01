@@ -1,0 +1,49 @@
+plugins {
+	id 'org.springframework.boot' version '3.1.0'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'java'
+}
+
+group = 'com.levi'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter'
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation 'com.google.cloud:spring-cloud-gcp-starter-pubsub:5.9.0'
+//	implementation 'org.springframework.integration:spring-integration-core:6.4.1'
+//	implementation 'com.google.auth:google-auth-library-oauth2-http:1.15.0'
+//	compileOnly 'org.projectlombok:lombok'
+//	annotationProcessor 'org.projectlombok:lombok'
+//	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	// Google Cloud Pub/Sub dependencies
+	implementation platform('com.google.cloud:libraries-bom:26.1.0')
+	implementation 'com.google.cloud:google-cloud-pubsub'
+
+	// For logging
+	implementation 'org.springframework.boot:spring-boot-starter-logging'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
