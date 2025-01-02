@@ -20,4 +20,13 @@ public class PubSubPublishRequest {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    // toString method
+    @Override
+    public String toString() {
+        return "PubSubPublishRequest{" +
+                "topic='" + topic + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }
