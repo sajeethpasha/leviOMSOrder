@@ -25,9 +25,10 @@ spring:
           target: Topic_MAO_Target
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 logging:
   level:
     com.google.cloud: DEBUG
     com.google.pubsub: DEBUG
+    org.springframework.boot.context.properties.bind: DEBUG

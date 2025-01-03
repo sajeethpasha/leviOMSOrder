@@ -15,6 +15,9 @@ java {
 
 repositories {
 	mavenCentral()
+	maven { url 'https://repo.spring.io/release' }
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
 }
 
 dependencies {
@@ -29,6 +32,8 @@ dependencies {
 //	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 //	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+
+	implementation 'com.google.cloud:spring-cloud-gcp-starter-pubsub:3.4.0'
 
 	implementation 'org.springframework.boot:spring-boot-starter'
 

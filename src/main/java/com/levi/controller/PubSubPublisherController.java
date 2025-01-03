@@ -74,11 +74,11 @@ public class PubSubPublisherController {
             publisher.publish(pubsubMessage).get();
             logger.info("Message successfully published to topic: {}", request.getTopic());
 
-            return ResponseEntity.ok("Message published to topic: " + request.getTopic());
+            return ResponseEntity.ok("3.Message published to topic : " + request.getTopic());
         } catch (Exception e) {
             logger.error("Exception encountered while publishing message to topic: {}", request.getTopic(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Failed to publish message: " + e.getMessage());
+                    .body("3.Failed to publish message: " + e.getMessage());
 
         } finally {
             // Clean up the publisher
@@ -92,7 +92,7 @@ public class PubSubPublisherController {
                     logger.error("Error shutting down publisher for topic: {}", request.getTopic(), e);
                 }
             }
-            logger.info("Finished publishMessage method.");
+            logger.info("2.Finished publishMessage method.");
         }
     }
 }

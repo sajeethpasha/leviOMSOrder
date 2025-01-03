@@ -30,4 +30,9 @@ public class HealthCheckController {
 
         return ResponseEntity.ok("OK");
     }
+
+    @GetMapping("/")
+    public String baseCheck() {
+        return "Application is running!";
+    }
 }

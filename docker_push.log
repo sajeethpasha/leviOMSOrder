@@ -1,0 +1,13 @@
+Using default tag: latest
+The push refers to repository [gcr.io/my-projectdemo-446217/pubsub-cloudrun-app]
+da987de122ee: Preparing
+3a83e52f8314: Preparing
+34f7184834b2: Preparing
+5836ece05bfd: Preparing
+72e830a4dff5: Preparing
+72e830a4dff5: Layer already exists
+3a83e52f8314: Layer already exists
+5836ece05bfd: Layer already exists
+34f7184834b2: Layer already exists
+da987de122ee: Pushed
+latest: digest: sha256:278921145da90b7967ecb81f9fd44902e70faa566ddd80bdbc267f103cd49263 size: 1369
